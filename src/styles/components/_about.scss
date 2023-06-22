@@ -1,0 +1,78 @@
+.about_class {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+        img {
+            width: 85%;
+            height: 223px;
+            object-fit: cover;
+            border-radius: 20px;
+          
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center ;
+            align-content: normal;
+            width: 100%;
+
+            .flex-items {
+                background: $color-1;
+                width: 75%;
+                height: 52px;
+                margin: 20px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center ;
+                justify-content: space-between;
+                
+
+                p {
+                    color: $color-2;
+                    font-size: 22px;
+                    margin-left: 15px;
+                }
+
+                img {
+                    width: 25px;
+                }
+
+                .upIcon {
+                    font-size: 24px;
+                    color: white;
+                    margin-right: 10px;
+                }
+            }
+
+          }
+          @media (max-width: 767px) {
+            img {
+              width: 90%;  // Par exemple, ajuster la largeur de l'image pour petits écrans
+              height: auto;  // ajuster la hauteur
+              margin-right: 15px;
+              margin-left: 15px;
+            }
+        
+            .flex-container {
+              .flex-items {
+                width: 90%;  // ajuster la largeur des items de flexbox
+                height: 30px;  // ajuster la hauteur
+        
+                p {
+                  font-size: 16px;  // ajuster la taille de la police pour les petits écrans
+                }
+        
+                .upIcon {
+                  font-size: 18px;  // ajuster la taille de l'icône
+                }
+              }
+            }
+          }
+
+}

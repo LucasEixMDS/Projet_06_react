@@ -1,0 +1,54 @@
+
+.footer{
+
+background: $color-3;
+max-width: 2560px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: auto;
+height: 209px;
+
+    .logo_header{
+        width:129px ;
+        height: 48px;
+    }
+
+ h2 {
+    color: $color-2;
+    margin-top: 40px;
+   letter-spacing: 3px;
+   font-weight: 300;
+ }
+ a {
+    text-decoration: none;
+ }
+
+
+ @media (max-width: 767px) {
+
+   height: auto;
+   padding: 50px;
+
+   a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+   }
+
+   h2 {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-left: 38px;
+      width: 50%;
+      
+      
+   }
+ }
+
+
+}
+
