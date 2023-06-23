@@ -22,18 +22,28 @@
             align-content: normal;
             width: 100%;
 
+            .container_info{
+              color: $color-1;
+              background: rgb(245, 241, 241);
+              font-weight: 300;
+              width: 75%;
+              border-radius: 5px;
+              padding: 20px;
+            }
+
             .flex-items {
                 background: $color-1;
                 width: 75%;
                 height: 52px;
                 margin: 20px;
+                margin-bottom: 0px;
                 border-radius: 5px;
                 display: flex;
                 align-items: center ;
                 justify-content: space-between;
                 
 
-                p {
+                h3 {
                     color: $color-2;
                     font-size: 22px;
                     margin-left: 15px;
@@ -43,18 +53,32 @@
                     width: 25px;
                 }
 
-                .upIcon {
-                    font-size: 24px;
-                    color: white;
-                    margin-right: 10px;
+                .iconContainer {
+                  display: inline-block;
+                  transition: transform 0.3s ease-in-out;
                 }
+                
+                .iconContainer.rotate {
+                  transform: rotateX(-180deg);
+                }
+                
+                .icon {
+                  font-size: 24px;
+                  color: white;
+                  margin-right: 10px;
+                }
+                
+               
+                
+                
+                
             }
 
           }
           @media (max-width: 767px) {
             img {
               width: 90%;  // Par exemple, ajuster la largeur de l'image pour petits écrans
-              height: auto;  // ajuster la hauteur
+              height: 250px;  // ajuster la hauteur
               margin-right: 15px;
               margin-left: 15px;
             }
