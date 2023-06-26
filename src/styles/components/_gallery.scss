@@ -2,6 +2,7 @@
     display: flex;
     background: rgb(247, 247, 247);
     height: max-content;
+    width: 85%;
     border-radius: 25px;
     margin: 43px;
     padding: 55px;
@@ -12,7 +13,7 @@
         justify-content: space-between;
         align-items: center;
         row-gap: 50px;
-        margin: 0 ;
+        
     }
     
     
@@ -24,6 +25,7 @@
         border-radius: 10px;
         height: 340px;
         width: 340px;
+        margin: 20px;
 
         Img {
             object-fit: cover;
