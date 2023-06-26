@@ -15,7 +15,7 @@ function Descript({ title, skill }) {
           {title}
         </h3>
         <div
-          className={`iconContainer ${isTrigger ? "" : "rotate"}`}
+          className={`iconContainer ${isTrigger ? "rotate" : ""}`}
           onClick={IconClick}
         >
           <UpOutlined className="icon" />
