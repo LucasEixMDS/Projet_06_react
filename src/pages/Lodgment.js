@@ -1,16 +1,23 @@
 import React from "react";
 import Header from "../components/Header";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import Description from "../components/Description";
 import Equipements from "../components/Equipments";
 import Logement from "../json/logement.json";
 import Box from "../components/Box";
+import Error from "./Error";
 
 const Lodgment = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const logement = Logement.find((l) => l.id === id);
+
+  if (!logement) {
+    navigate("/Error");
+    return <Error />;
+  }
 
   return (
     <div>
