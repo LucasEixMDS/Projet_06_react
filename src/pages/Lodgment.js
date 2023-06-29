@@ -1,14 +1,46 @@
 import React from "react";
 import Header from "../components/Header";
+import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
+import Description from "../components/Description";
+import Equipements from "../components/Equipments";
+import Logement from "../json/logement.json";
+import Box from "../components/Box";
 
-const Error = () => {
+const Lodgment = () => {
+  const { id } = useParams();
+  const logement = Logement.find((l) => l.id === id);
+
   return (
     <div>
       <Header />
+      <div className="logement_class">
+        <div className="lodgment" key={id}>
+          <Carousel key={logement.pictures} Picture={logement.pictures} />
+          <Box
+            title={logement.title}
+            location={logement.location}
+            tags={logement.tags}
+            name={logement.host.name}
+            picture={logement.host.picture}
+            rating={logement.rating}
+          />
+          <div className="logement_info">
+            <Description
+              key={logement.description}
+              description={logement.description}
+            />
+            <Equipements
+              key={logement.equipments}
+              equipments={logement.equipments}
+            />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
 };
 
-export default Error;
+export default Lodgment;

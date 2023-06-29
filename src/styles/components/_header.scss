@@ -10,7 +10,7 @@
     .logo {
         width: 40%;
         height: 30%;
-        margin-left: 44px;
+        margin-left: 47px;
     }
 
     @media (max-width: 767px) {
@@ -29,6 +29,8 @@
 }
 
 .navigation {
+    margin-right: 36px;
+
     ul {
         display: flex;
         width: 100%;
@@ -84,6 +86,8 @@
             margin: 0;
             width: 50%;
             
+            
+            
 
             a {
                 margin-right: 0;
@@ -97,6 +101,15 @@
                     
                 }
             }
+
+
+           
         }
     }
+}
+
+@media (max-width: 767px) {  
+.navigation{
+    margin-right: -10px;
+}
 }

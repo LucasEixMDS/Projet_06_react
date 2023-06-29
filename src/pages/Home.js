@@ -11,7 +11,6 @@ const Home = () => {
       <div className="home_class">
         <img src={backgroundImg2} className="home_img" alt="limage d'un fond" />
         <p className="textground">Chez vous, partout et ailleurs</p>
-
         <Gallery />
         <Footer />
       </div>
