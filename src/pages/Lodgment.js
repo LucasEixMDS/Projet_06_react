@@ -24,7 +24,7 @@ const Lodgment = () => {
       <Header />
       <div className="logement_class">
         <div className="lodgment" key={id}>
-          <Carousel key={logement.pictures} Picture={logement.pictures} />
+          <Carousel Picture={logement.pictures} />
           <Box
             title={logement.title}
             location={logement.location}
@@ -34,14 +34,8 @@ const Lodgment = () => {
             rating={logement.rating}
           />
           <div className="logement_info">
-            <Description
-              key={logement.description}
-              description={logement.description}
-            />
-            <Equipements
-              key={logement.equipments}
-              equipments={logement.equipments}
-            />
+            <Description description={logement.description} />
+            <Equipements equipments={logement.equipments} />
           </div>
         </div>
       </div>

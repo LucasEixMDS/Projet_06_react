@@ -10,9 +10,9 @@ function Box({ title, location, tags, name, picture, rating }) {
           <p className="location_box">{location}</p>
         </div>
         <div className="tags_box">
-          {tags.map((tags) => (
-            <div className="label_box">
-              <label htmlFor="tag">{tags}</label>
+          {tags.map((tag, index) => (
+            <div key={index} className="label_box">
+              <label htmlFor="tag">{tag}</label>
             </div>
           ))}
         </div>
@@ -22,7 +22,7 @@ function Box({ title, location, tags, name, picture, rating }) {
           <p>{name}</p>
           <img className="picture_box" src={picture} alt="Propriétaire" />
         </div>
-        <Rating key={rating} score={rating} />
+        <Rating score={rating} />
       </div>
     </div>
   );

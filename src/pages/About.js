@@ -11,9 +11,9 @@ const About = () => {
       <div className="about_class">
         <img src={backgroundImg} className="about_img" alt="limage d'un fond" />
         <div className="flex-container">
-          {Data.map((descript) => (
+          {Data.map((descript, index) => (
             <Items
-              key={descript}
+              key={index}
               title={descript.titleId}
               skill={descript.skillId}
             />
