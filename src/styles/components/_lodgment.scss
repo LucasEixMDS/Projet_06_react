@@ -242,13 +242,27 @@
   .box_parent{
     display: flex;
     flex-direction: column;
+    
   }
 
+  .tags_box{
+    flex-wrap: wrap;
+  }
   .right_box{
     display: flex;
     flex-direction: row-reverse !important;
     justify-content: center;
     align-items: center;
+
+    
+  }
+
+  .box_parent .right_box .rating_box .img_box{
+    margin-left: 0px;
+  }
+
+  .label_box{
+    margin-bottom: 3px;
   }
 
 }
