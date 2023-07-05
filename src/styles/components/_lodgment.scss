@@ -105,6 +105,13 @@
 
 @media (max-width: 767px) {
 
+  .carousel_arrow_left img{
+    height: 33px;
+  }
+  .carousel_arrow_right img{
+    height: 33px;
+  }
+
     .lodgment{
         width: 90%;
     }
@@ -178,7 +185,7 @@
       margin-right: 15px;
       background: $color-1;
       color: white;
-      border-radius: 10px;
+      border-radius: 5px;
       width: 115px ;
       font-size: 12px;
       font-weight: 300  ;
@@ -191,7 +198,6 @@
 }
 
   .right_box {
-    margin-top:20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
