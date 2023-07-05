@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import Description from "../components/Description";
