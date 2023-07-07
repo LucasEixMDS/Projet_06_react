@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UpOutlined } from "@ant-design/icons";
 
 function Equipement({ equipments }) {
   const [isTrigger, setIsTrigger] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const IconClick = () => {
     setIsTrigger(!isTrigger);
   };
+
+  useEffect(() => {
+    if (isTrigger) {
+      setVisible(false);
+      setTimeout(() => setVisible(true), 20);
+    } else {
+      setVisible(false);
+    }
+  }, [isTrigger]);
 
   return (
     <div className="descript_container">
@@ -20,7 +30,7 @@ function Equipement({ equipments }) {
         </div>
       </div>
       {isTrigger && (
-        <ul>
+        <ul className={`container_info ${visible ? "visible" : ""}`}>
           {equipments.map((equipment, index) => (
             <li className="descript_infos" key={index}>
               {equipment}

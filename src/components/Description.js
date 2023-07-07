@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UpOutlined } from "@ant-design/icons";
 
 function Description({ description }) {
@@ -7,6 +7,17 @@ function Description({ description }) {
   const IconClick = () => {
     setIsTrigger(!isTrigger);
   };
+
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (isTrigger) {
+      setVisible(false);
+      setTimeout(() => setVisible(true), 20);
+    } else {
+      setVisible(false);
+    }
+  }, [isTrigger]);
 
   return (
     <div className="descript_container">
@@ -20,7 +31,10 @@ function Description({ description }) {
         </div>
       </div>
       {isTrigger && (
-        <p className="container_info" key={description}>
+        <p
+          className={`container_info ${visible ? "visible" : ""}`}
+          key={description}
+        >
           {description}
         </p>
       )}

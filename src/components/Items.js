@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UpOutlined } from "@ant-design/icons";
 
 function Descript({ title, skill }) {
@@ -7,6 +7,17 @@ function Descript({ title, skill }) {
   const IconClick = () => {
     setIsTrigger(!isTrigger);
   };
+
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (isTrigger) {
+      setVisible(false);
+      setTimeout(() => setVisible(true), 20);
+    } else {
+      setVisible(false);
+    }
+  }, [isTrigger]);
 
   return (
     <div className="flex-container">
@@ -22,7 +33,7 @@ function Descript({ title, skill }) {
         </div>
       </div>
       {isTrigger && (
-        <p className="container_info" key={skill}>
+        <p className={`container_info ${visible ? "visible" : ""}`} key={skill}>
           {skill}
         </p>
       )}
