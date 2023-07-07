@@ -17,8 +17,6 @@
     width: 100%;
 
     .descript_container{
-        background-color: $color-1;
-        border-radius:10px ;
         width: 47%;
         display: flex;
         flex-wrap: nowrap;
@@ -26,7 +24,6 @@
         text-align: center;
         align-items: center;
         flex-direction: column;
-        overflow: auto;
 
         
         
@@ -34,7 +31,7 @@
         .container_info {
           position: relative;
           color: $color-1;
-          background: rgb(245, 241, 241);
+          background: $color-4;
           font-weight: 300;
           text-align: left;
           font-size: 20px;
@@ -54,22 +51,26 @@
       ul {
         position: relative;
         color: $color-1;
-        background: rgb(245, 241, 241);
+        background: $color-4;
         font-weight: 300;
         text-align: left;
         font-size: 20px;
-
+        
         width: 100%;
         border-radius: 0px 0px 5px 5px;
-        padding: 20px;
+        padding: 0px;
         overflow: hidden;
         transition: max-height 1s ease; 
 
-    }
-    
-    ul.visible {
-        max-height: 500px; 
-    }
+        li {
+          padding: 4px 0px;
+        }
+
+      }
+      
+      ul.visible {
+          max-height: 500px; 
+      }
 
           
     

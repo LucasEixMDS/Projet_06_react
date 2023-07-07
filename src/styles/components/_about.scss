@@ -14,17 +14,18 @@
         }
 
         .flex-container {
+            width: 75%;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content: center;
             align-items: center ;
             align-content: normal;
-            width: 100%;
+            padding: 16px 0;
 
             .container_info {
               color: $color-1;
-              background: rgb(245, 241, 241);
+              background: $color-4;
               font-weight: 300;
               width: 75%;
               border-radius: 5px;
@@ -48,7 +49,6 @@
 
             .flex-items {
                 background: $color-1;
-                width: 75%;
                 height: 52px;
                 margin: 20px;
                 margin-bottom: 0px;

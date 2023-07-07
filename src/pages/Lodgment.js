@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
 import { useParams, useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import Description from "../components/Description";
 import Equipements from "../components/Equipments";
@@ -19,27 +17,36 @@ const Lodgment = () => {
     return <Error />;
   }
 
+  const {
+    pictures,
+    title,
+    location,
+    tags,
+    rating,
+    description,
+    equipments,
+    host: {
+      name,
+      picture,
+    }
+  } = logement;
   return (
-    <div>
-      <Header />
-      <div className="logement_class">
-        <div className="lodgment" key={id}>
-          <Carousel Picture={logement.pictures} />
-          <Box
-            title={logement.title}
-            location={logement.location}
-            tags={logement.tags}
-            name={logement.host.name}
-            picture={logement.host.picture}
-            rating={logement.rating}
-          />
-          <div className="logement_info">
-            <Description description={logement.description} />
-            <Equipements equipments={logement.equipments} />
-          </div>
+    <div className="logement_class">
+      <div className="lodgment" key={id}>
+        <Carousel Picture={pictures} />
+        <Box
+          title={title}
+          location={location}
+          tags={tags}
+          name={name}
+          picture={picture}
+          rating={rating}
+        />
+        <div className="logement_info">
+          <Description description={description} />
+          <Equipements equipments={equipments} />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
